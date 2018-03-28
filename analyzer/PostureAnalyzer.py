@@ -14,6 +14,7 @@ class PostureAnalyzer(BaseAnalyzer):
         return not self.__is_person_in_frame()
 
     def __is_person_in_frame(self):
+
         
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     	personInFrame = face_cascade.detectMultiScale(gray, 1.3, 5)
@@ -22,3 +23,5 @@ class PostureAnalyzer(BaseAnalyzer):
 		return True
 	else:
 		return False
+
+
